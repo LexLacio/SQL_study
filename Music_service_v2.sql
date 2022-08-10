@@ -27,9 +27,10 @@ CREATE TABLE IF NOT EXISTS singers_albums_list (
 );
 
 CREATE TABLE IF NOT EXISTS track (
-	album_id INTEGER PRIMARY KEY REFERENCES album(id),
+	track_id SERIAL PRIMARY KEY,
+	album_id INTEGER NOT NULL REFERENCES album(id)
 	track_name VARCHAR(50) NOT NULL,
-	track_duration integer NOT null
+	track_duration integer NOT NULL CHECK (track_duration < 10800) 
 );
 
 CREATE TABLE IF NOT EXISTS compilation (
@@ -40,7 +41,7 @@ CREATE TABLE IF NOT EXISTS compilation (
 
 CREATE TABLE IF NOT EXISTS tracks_compilations_list (
 	id SERIAL PRIMARY KEY,
-	track_id INTEGER NOT NULL REFERENCES track(album_id),
+	track_id INTEGER NOT NULL REFERENCES track(track_id),
 	compilation_id INTEGER NOT NULL REFERENCES compilation(id)
 );
 
