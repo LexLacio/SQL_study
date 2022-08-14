@@ -32,8 +32,8 @@ INSERT INTO singers_genres_list(singer_id, genre_id) VALUES
 (9, 6),
 (10, 6),
 (11, 7),
-(12, 7);
-
+(12, 7),
+(8, 3);
 
 INSERT INTO album(album_name, album_year) VALUES
 ('What a Wonderful World', 1968),
@@ -47,8 +47,9 @@ INSERT INTO album(album_name, album_year) VALUES
 ('The Visitors', 1981),
 ('Anti', 2016),
 ('Man of the Woods', 2018),
-('Eye Dance', 1985);
-
+('Eye Dance', 1985),
+('Music to Be Murdered By', 2020),
+('Power Up', 2020);
 
 INSERT INTO singers_albums_list(singer_id, album_id) VALUES
 (1, 1),
@@ -62,8 +63,9 @@ INSERT INTO singers_albums_list(singer_id, album_id) VALUES
 (9, 9),
 (11, 10),
 (12, 11),
-(10, 12);
-
+(10, 12),
+(3, 13),
+(7, 14);
 
 INSERT INTO track(album_id, track_name, track_duration) VALUES
 (1, 'What a Wonderful World', 129),
@@ -89,8 +91,12 @@ INSERT INTO track(album_id, track_name, track_duration) VALUES
 (11,'Montana', 279),
 (11,'Breeze Off the Pond', 251),
 (12,'My Cherie Amour', 244),
-(12,'Dreadlock Holiday', 292);
-
+(12,'Dreadlock Holiday', 292),
+(13, 'Unaccommodating', 217),
+(13, 'Godzilla', 211),
+(13, 'Darkness', 337),
+(14, 'Realize', 217),
+(14, 'Demon Fire', 210);
 
 INSERT INTO compilation(compilation_name, compilation_year) VALUES
 ('US top', 2020),
@@ -124,4 +130,3 @@ INSERT INTO tracks_compilations_list(track_id, compilation_id) VALUES
 (6,2),
 (13,2),
 (14,2);
-
